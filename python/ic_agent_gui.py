@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 import os
-from ic_agent_core import convert_image
+from python.ic_agent_core import convert_image
 
 # Create the main window
 root = tk.Tk()

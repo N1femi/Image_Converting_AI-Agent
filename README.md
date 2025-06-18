@@ -9,6 +9,11 @@ This beginner project was started late-May to help me improve my programming and
  - OS (Operating System)
  - tkinter (for Application Window)
 
+#### Other tools used:
+ - npm
+ - node.js
+ - Electron
+
 <hr>
 
 I was planning on keeping the project and it's development to myself until I realized I could simultanously use and learn the benefits of GitHub and developer collaboration!!
