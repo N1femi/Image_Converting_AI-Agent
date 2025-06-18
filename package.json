@@ -1,0 +1,23 @@
+{
+  "name": "ic_agent",
+  "version": "1.0.0",
+  "description": "Image conversion tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N1femi/IC_Agent.git"
+  },
+  "author": "Oluwanifemi Babajide",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/N1femi/IC_Agent/issues"
+  },
+  "homepage": "https://github.com/N1femi/IC_Agent#readme",
+  "devDependencies": {
+    "electron": "^36.4.0"
+  }
+}

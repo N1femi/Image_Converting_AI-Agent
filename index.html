@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <title>My Image Converter</title>
+  </head>
+
+  <body>
+    <div id="left-side">
+      <div id="title-section">
+        <h1>Convert File<br>Formats Easily.</h1>
+      </div>
+
+      <div id="nav-section">
+        <ul>
+          <li>Images</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="right-side">
+      <input type="file" id="file-input">
+      <img id="preview" alt="Image Preview" src="">
+      <p><u>Output Format</u></p>
+      <select class="configurable">
+        <option>.png</option>
+        <option>.jpg</option>
+        <option>.jpeg</option>
+        <option>.webm</option>
+        <option>.bmp</option>
+      </select>
+      <button id="convert-button">
+        Convert
+      </button>
+    </div>
+
+  </body>
+
+</html>
