@@ -7,8 +7,13 @@ const createWindow = () => {
    minWidth: 750,
    minHeight: 500,
    maxWidth: 1088,
-   maxHeight: 725
-  })
+   maxHeight: 725,
+
+   webPreferences: {
+     nodeIntegration: true,
+     contextIsolation: false
+   }
+ })
 
   // Min Window Size = [750, 500]
   // Max Window Size = [1088, 725]

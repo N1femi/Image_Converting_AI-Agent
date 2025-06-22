@@ -33,7 +33,7 @@ body {
 }
 
 #title-section h1 {
-  font-size: 2.5rem;
+  font-size: 5vh;
   font-weight: 800;
   line-height: 1.2;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -41,16 +41,22 @@ body {
 
 /* Right Side (UI) */
 #right-side {
-  gap: 20px;
+  gap: 15px;
 }
 
-input[type="file"] {
+#browse-button {
   padding: 10px;
   background-color: #111;
   border: 1px solid #444;
   border-radius: 6px;
   color: white;
   margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+#browse-button:hover {
+  border-color: #ff5f6d;
 }
 
 /* Image Preview */
@@ -62,6 +68,7 @@ input[type="file"] {
   border-radius: 6px;
   background-color: #1e1e1e;
   margin: 10px 0;
+  padding: 5px;
 }
 
 /* Dropdown styling */
@@ -86,7 +93,7 @@ select.configurable {
   color: white;
   box-shadow: 0 4px 10px rgba(255, 95, 109, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 #convert-button:hover {
@@ -109,14 +116,15 @@ select.configurable {
   margin: 0;
 }
 
-#nav-section li {
+#nav-section a {
   font-size: 1rem;
-  color: #ccc;
+  color: #797979;
   font-weight: 500;
   margin: 7.5px;
+  text-decoration: none;
 }
 
-#nav-section li:hover {
+#nav-section a:hover {
   color: white;
   cursor: pointer;
 }

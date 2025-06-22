@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/N1femi/IC_Agent#readme",
   "devDependencies": {
-    "electron": "^36.4.0"
+    "electron": "^36.5.0"
   }
 }

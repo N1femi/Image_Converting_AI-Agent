@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self'; img-src 'self' blob: data:"
+/>
+<meta
+  http-equiv="X-Content-Security-Policy"
+  content="default-src 'self'; script-src 'self'; img-src 'self' blob: data:"
+/>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,27 +30,28 @@
 
       <div id="nav-section">
         <ul>
-          <li>Images</li>
+          <a href="https://github.com/N1femi/Image_Converting_AI-Agent" target="_blank">Github</a>
         </ul>
       </div>
     </div>
 
     <div id="right-side">
-      <input type="file" id="file-input">
-      <img id="preview" alt="Image Preview" src="">
-      <p><u>Output Format</u></p>
-      <select class="configurable">
-        <option>.png</option>
-        <option>.jpg</option>
-        <option>.jpeg</option>
-        <option>.webm</option>
-        <option>.bmp</option>
+      <button onclick="browse()" id="browse-button">Browse Files</button>
+      <img id="preview" alt="Image Preview" src="#">
+      <p>Output Format</p>
+      <select id="format-dropdown" class="configurable">
+        <option value="png">.png</option>
+        <option value="jpg">.jpg</option>
+        <option value="jpeg">.jpeg</option>
+        <option value="webm">.webm</option>
+        <option value="bmp">.bmp</option>
       </select>
-      <button id="convert-button">
+      <button onclick="convert()" id="convert-button">
         Convert
       </button>
     </div>
 
   </body>
 
+  <script src="renderer.js"></script>
 </html>
