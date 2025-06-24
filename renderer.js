@@ -1,49 +1,37 @@
-// Probably make sure file is valid for the type of Converion(Images)
+// Use require for everything in Electron renderer
 const { spawn } = require("child_process")
-const { dialog } = require("@electron/remote")
+const { ipcRenderer } = require("electron")
 
 let acceptedFormats = ["jpg", "jpeg", "png", "webm", "bmp"]
 
-// Previewing Image Handler
-let fileInputEl = document.getElementById("file-input")
+// Previewing Image Handler and Selectign
 let imgPreview = document.getElementById("preview")
+let result
+let filePath
 
-fileInputEl.addEventListener("change", function(event) {
-    const selectedFile = event.target.files[0]
+async function browse() {
+    console.log("Browsing!")
 
-    if (selectedFile) {
-        console.log("Selected File, Found!")
-        const tempUrl = URL.createObjectURL(selectedFile)
-
-        imgPreview.src = tempUrl
-
-    } else {
-        console.log("Cannot find selected file.")
+    try {
+        result = await ipcRenderer.invoke('show-open-dialog')
+        console.log("Browse Result:", result)
+        
+    } catch (error) {
+        console.error("IPC Error:", error)
     }
-    
-})
-
-function browse() {
-    const result = dialog.showOpenDialog({
-        filters: [
-            {name: "Images", extensions: ["jpg", "jpeg", "png", "webm", "bmp"]}
-        ]
-    })
 }
 
+if (result != null && result.canceled === false) {
+    console.log("Selected an Image")
+    // If canceled is false then we got a file path >:)
+    filePath = result.filePaths[0]
+    imgPreview.src = filePath
+}
+    
+
 let outFormatEl = document.getElementById("format-dropdown")
-let filePath = null
 
 function convert() {
     const outFormat = outFormatEl.value
-
-
+    
 }
-
-
-
-
-
-// When user chooses file display image in preview
-// Once user clicks convert, take them to the converter page
-// User can cancel conversion process anytime

@@ -1,4 +1,21 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, dialog, ipcMain } = require('electron')
+
+
+function handleShowOpenDialog() {
+    // console.log('IPC handler called!') // Debug line
+    
+    return dialog.showOpenDialog({
+        filters: [
+            {name: "Images", extensions: ["jpg", "jpeg", "png", "webp", "bmp"]}
+        ]
+    }).then(function(result) {
+        // console.log('Dialog result in main:', result) // Debug line
+        return result
+    })
+}
+
+ipcMain.handle('show-open-dialog', handleShowOpenDialog)
+
 
 const createWindow = () => {
  const win = new BrowserWindow({
@@ -11,7 +28,8 @@ const createWindow = () => {
 
    webPreferences: {
      nodeIntegration: true,
-     contextIsolation: false
+     contextIsolation: false,
+     // sandbox: true
    }
  })
 
