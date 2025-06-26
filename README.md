@@ -14,6 +14,13 @@ This beginner project was started late-May to help me improve my programming and
  - node.js
  - Electron
 
+
+To run program:
+1. Clone Repository
+2. Navigate & Open Repository in local IDE
+3. type ```npm run start``` in Terminal
+4. Hit Enter and watch it work 😁
+
 <hr>
 
 I was planning on keeping the project and it's development to myself until I realized I could simultanously use and learn the benefits of GitHub and developer collaboration!!
