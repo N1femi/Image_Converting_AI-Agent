@@ -15,7 +15,7 @@ def convert_image(original_path, target_format):
         print(f"[✓] Image converted and saved as: {os.path.abspath(output_filepath)}")
         
         # Instead of image.show(), print the path for JavaScript:
-        print(os.path.abspath(output_filepath))  # This goes to stdout
+        print(f"Successfully saved to: {output_filepath}")  # This goes to stdout
         
     except Exception as e:
         print(f"[!] Failed to convert image: {e}")
@@ -25,3 +25,5 @@ if __name__ == "__main__":
     import sys
     if len(sys.argv) == 3:
         convert_image(sys.argv[1], sys.argv[2])
+    else:
+        print("Usage: <filePath> <targetFormat>")
