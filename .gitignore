@@ -3,3 +3,4 @@
 *.pyc
 /images
 /node_modules
+/.venv

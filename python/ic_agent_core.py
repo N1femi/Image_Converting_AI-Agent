@@ -10,7 +10,7 @@ def convert_image(original_path, target_format):
 
     try:
         image = Image.open(original_path)
-        target_format = "JPEG" if target_format.lower() == "jpg" else target_format.upper()
+        target_format = "jpeg" if target_format.lower() == "jpg" else target_format.upper()
         image.convert("RGB").save(output_filepath)
         print(f"[✓] Image converted and saved as: {os.path.abspath(output_filepath)}")
         
