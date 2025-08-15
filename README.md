@@ -1,4 +1,4 @@
-<h1>🖼️🤖 Image_Converting_AI-Agent</h1> 
+<h1>🖼️🤖 Image_Converting</h1> 
 
 Converts selected Images into user-chosen formats.
 
